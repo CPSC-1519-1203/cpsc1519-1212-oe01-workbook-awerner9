@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="MainVC" id="BYZ-38-t0r" customClass="ViewController" customModule="HelloIOSWorld" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ofv-nF-yke">
+                                <rect key="frame" x="20" y="44" width="374" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T8K-IG-fJe">
+                                <rect key="frame" x="20" y="52" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                                <connections>
+                                    <action selector="dismissKeyboard:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="GEW-W9-5YB"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fai-Iq-0nJ">
+                                <rect key="frame" x="164.5" y="432.5" width="85" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Say Hello"/>
+                                <connections>
+                                    <action selector="changeGreeting:" destination="BYZ-38-t0r" eventType="touchUpInside" id="shZ-e8-YBd"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter your age" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2WQ-xq-D2Q">
+                                <rect key="frame" x="20" y="94" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="fai-Iq-0nJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="1UX-hr-izd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2WQ-xq-D2Q" secondAttribute="trailing" constant="20" id="2wC-1f-kxm"/>
+                            <constraint firstItem="Ofv-nF-yke" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Ka-4W-mil"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="T8K-IG-fJe" secondAttribute="trailing" constant="20" id="7uQ-4f-pUn"/>
+                            <constraint firstItem="T8K-IG-fJe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="IUu-MI-wBD"/>
+                            <constraint firstItem="Ofv-nF-yke" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KIP-9H-6hh"/>
+                            <constraint firstItem="2WQ-xq-D2Q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Pjo-cd-Sx6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="2WQ-xq-D2Q" secondAttribute="trailing" constant="20" id="Z3H-pG-0qk"/>
+                            <constraint firstItem="2WQ-xq-D2Q" firstAttribute="top" secondItem="T8K-IG-fJe" secondAttribute="bottom" constant="8" symbolic="YES" id="bWK-ok-3es"/>
+                            <constraint firstItem="fai-Iq-0nJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fpe-VE-3NE"/>
+                            <constraint firstItem="T8K-IG-fJe" firstAttribute="top" secondItem="Ofv-nF-yke" secondAttribute="bottom" constant="8" symbolic="YES" id="hse-9M-tAY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ofv-nF-yke" secondAttribute="trailing" constant="20" id="vXp-P2-nyM"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="cBv-dR-fBa" appends="YES" id="aB5-Ku-EXb"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="ageTextField" destination="2WQ-xq-D2Q" id="dBo-tf-hIe"/>
+                        <outlet property="nameTextField" destination="T8K-IG-fJe" id="bL2-my-hlQ"/>
+                        <outlet property="resultLabel" destination="Ofv-nF-yke" id="ngC-Dz-29I"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="cBv-dR-fBa">
+                    <connections>
+                        <action selector="dismissKeypad:" destination="BYZ-38-t0r" id="jyP-sN-6X9"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-23.188405797101453" y="83.705357142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
